@@ -1,0 +1,14 @@
+.btn {
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-outline {
+    border: 2px solid var(--primary);
+}

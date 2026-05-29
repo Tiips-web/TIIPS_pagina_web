@@ -1,0 +1,153 @@
+
+:root {
+    --accent: #10b981;
+}
+
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/* =========================
+   NAVBAR DESKTOP
+========================= */
+.navbar-desktop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #1d5e16, #22a655);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    width: 160px;
+    height: 60px;
+
+    background-image: url("../Imagenes/Logo.png");
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    font-size: 0;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.menu a:hover {
+    color: var(--accent);
+}
+
+/* =========================
+   NAVBAR MOBILE
+========================= */
+.navbar-mobile {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 550px;
+    background: #0f172a;
+    border-radius: 30px;
+    padding: 12px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #94a3b8;
+    font-size: 10px;
+    cursor: pointer;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.nav-item i {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.nav-item.active {
+    color: var(--accent);
+}
+
+.nav-item.active i {
+    transform: translateY(-5px);
+}
+
+/* =========================
+   SECCIONES (solo demo)
+========================= */
+
+
+/* VERDES MÁS ELEGANTES Y SUAVES */
+
+#home { 
+    background: #f6fbf7;
+}
+
+#profiles { 
+    background: #edf7f0;
+}
+
+#services { 
+    background: #dcefe3;
+}
+
+#groups { 
+    background: #c6e4d0;
+}
+
+#team { 
+    background: #a8d5ba;
+}
+/* =========================
+   RESPONSIVE
+========================= */
+.navbar-desktop {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .navbar-desktop {
+        display: block;
+    }
+    .navbar-mobile {
+        display: none;
+    }
+}

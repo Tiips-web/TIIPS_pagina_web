@@ -1,0 +1,12 @@
+footer {
+    background: var(--dark);
+    color: white;
+    padding: 80px;
+    text-align: center;
+}
+
+.btn-float {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+}
