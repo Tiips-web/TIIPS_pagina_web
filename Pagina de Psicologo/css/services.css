@@ -1,0 +1,194 @@
+/* =========================
+   GRID
+========================= */
+
+.services-grid{
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    margin-top: 60px;
+
+    /* IMPORTANTE */
+    align-items: start;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.service-card{
+    background: #fff;
+
+    border-radius: 28px;
+
+    padding: 35px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.06);
+
+    transition: .35s ease;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    overflow: hidden;
+
+    /* IMPORTANTE */
+    align-self: start;
+}
+
+.service-card:hover{
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 40px rgba(0,0,0,.10);
+}
+
+/* =========================
+   ICONO
+========================= */
+
+.service-icon{
+    width: 75px;
+    height: 75px;
+
+    border-radius: 20px;
+
+    background: rgba(39,188,62,.12);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+}
+
+.service-icon i{
+    font-size: 32px;
+
+    color: #27bc3e;
+}
+
+/* =========================
+   TEXTO
+========================= */
+
+.service-card h3{
+    font-size: 1.5rem;
+
+    margin-bottom: 15px;
+
+    color: #111827;
+}
+
+.service-card p{
+    color: #6b7280;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+/* =========================
+   LISTA
+========================= */
+
+.service-card ul{
+    padding-left: 18px;
+
+    margin-bottom: 25px;
+}
+
+.service-card ul li{
+    margin-bottom: 10px;
+
+    color: #4b5563;
+
+    line-height: 1.6;
+}
+
+/* =========================
+   BOTÓN
+========================= */
+
+.btn-mini{
+    margin-top: auto;
+
+    border: none;
+
+    background: #27bc3e;
+
+    color: white;
+
+    padding: 14px 18px;
+
+    border-radius: 14px;
+
+    font-size: .95rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.btn-mini:hover{
+    background: #1d9d31;
+
+    transform: scale(1.03);
+}
+
+/* =========================
+   INFO EXTRA
+========================= */
+
+.service-extra{
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: all .45s ease;
+
+    margin-top: 0;
+}
+
+.service-card.active .service-extra{
+    max-height: 300px;
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+.service-extra p{
+    margin: 0;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px){
+
+    .services-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 768px){
+
+    .services-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .service-card{
+        padding: 28px;
+    }
+
+}
